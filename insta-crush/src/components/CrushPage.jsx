@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 
 const gifs = [
-  "https://media1.tenor.com/m/qKFNYB3HB9YAAAAC/cat-tiktok.gif",
-  "https://media1.tenor.com/m/UOQYl0tLL_sAAAAC/qq-%E5%93%AD%E5%93%AD.gif",
-  "https://media1.tenor.com/m/x30tZneTNRYAAAAC/banana-banana-cat.gif",
-  "https://media1.tenor.com/m/Ce_EIG6qg0kAAAAC/happy-happy-happy-happy.gif",
+  "https://media.giphy.com/media/xT8qB4foF1nxHZwpLa/giphy.gif",
+  "https://media.giphy.com/media/l2JHRhAtnJSDNJ2py/giphy.gif",
+  "https://media.giphy.com/media/3oEjI4sFlp73fvEYgw/giphy.gif",
+  "https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif",
 ];
 
 const questions = [
@@ -19,10 +19,14 @@ function CrushPage() {
   const [stage, setStage] = useState(0);
   const [showHappyEnding, setShowHappyEnding] = useState(false);
   const [brokenHeartPosition, setBrokenHeartPosition] = useState({ top: 0, left: 0 });
+  const audioRef = useRef(null);
 
   useEffect(() => {
     if (stage === 2) {
       setBrokenHeartPosition(getRandomPosition());
+      if (audioRef.current) {
+        audioRef.current.play().catch(error => console.error("Audio playback failed:", error));
+      }
     }
   }, [stage]);
 
@@ -33,6 +37,10 @@ function CrushPage() {
 
   const handleHeartClick = () => {
     setShowHappyEnding(true);
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
   };
 
   const handleBrokenHeartClick = () => {
@@ -49,6 +57,7 @@ function CrushPage() {
 
   return (
     <div className="crush-page">
+      <audio ref={audioRef} src="/tarse.mp3" loop />
       {!showHappyEnding ? (
         <>
           <img src={gifs[stage]} alt="Crush GIF" />
