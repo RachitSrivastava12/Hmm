@@ -12,7 +12,7 @@ Insta Crush is a fun, interactive web application that allows users to create pe
 
 ## Demo
 
-[Live Demo](https://your-vercel-deployment-url.vercel.app) (Replace with your actual Vercel deployment URL)
+[Live Demo](https://hmm-sandy.vercel.app/) (Replace with your actual Vercel deployment URL)
 
 ## Technologies Used
 
