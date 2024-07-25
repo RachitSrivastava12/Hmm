@@ -37,7 +37,7 @@ function UserForm() {
         </form>
       ) : (
         <div className="link-generated">
-          <p>Your crush link:</p>
+          <p>Copy kr lo heheheh</p>
           <p>{getLink()}</p>
           <CopyToClipboard text={getLink()}>
             <button>🫶🏻</button>
