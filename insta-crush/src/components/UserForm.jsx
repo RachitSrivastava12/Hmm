@@ -28,7 +28,7 @@ function UserForm() {
           />
           <input
             type="text"
-            placeholder="Enter your Insta URL"
+            placeholder="Enter your Insta handle"
             value={instagram}
             onChange={(e) => setInstagram(e.target.value)}
             required
