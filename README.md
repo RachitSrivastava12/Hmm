@@ -1,6 +1,6 @@
-# Insta Crush
+# Don't know what to name it
 
-Insta Crush is a fun, interactive web application that allows users to create personalized "crush pages" and share them with friends. The app generates a unique link for each user, which leads to a playful interaction where visitors can express their feelings through a series of animated responses.
+It is a fun, interactive web application that allows users to create personalized "crush pages" and share them with friends. The app generates a unique link for each user, which leads to a playful interaction where visitors can express their feelings through a series of animated responses.
 
 ## Features
 
