@@ -9,7 +9,7 @@ const gifs = [
 ];
 
 const questions = [
-  "Do you like me 🫣?",
+  `Do you like ${name} 🫣?`,
   "Itne jaldi na n karo 🥺😭",
   "HAYE RE AESE TARSE HUMKO HOGYE SAU ARSE RE"
 ];
